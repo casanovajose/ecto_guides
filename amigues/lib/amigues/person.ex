@@ -12,5 +12,6 @@ defmodule Amigues.Person do
     person
     |> cast(params, [:first_name, :last_name, :age])
     |> validate_required([:first_name, :last_name])
+    |> validate_length(:first_name, min: 4)
   end
 end
